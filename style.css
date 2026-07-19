@@ -69,7 +69,6 @@ nav a:hover {
 
 
 
-
 .hero {
 
     text-align: center;
@@ -109,7 +108,6 @@ nav a:hover {
 
 
 
-
 section {
 
     padding: 50px 8%;
@@ -130,7 +128,6 @@ section h2 {
 
 
 
-
 .pc-container {
 
     display: flex;
@@ -139,7 +136,6 @@ section h2 {
     gap: 25px;
 
 }
-
 
 
 
@@ -154,6 +150,7 @@ section h2 {
     width: 100%;
     text-align: center;
     border: 1px solid #252535;
+    transition: 0.3s;
 
 }
 
@@ -161,11 +158,61 @@ section h2 {
 
 .pc-card:hover {
 
-    transform: translateY(-5px);
-    transition: 0.3s;
+    transform: translateY(-8px);
 
 }
 
+
+
+
+
+.badge {
+
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+
+
+.performance {
+
+    color: #aaa;
+    font-size: 14px;
+
+}
+
+
+
+.price {
+
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px;
+
+}
+
+
+
+.pc-card strong {
+
+    font-size: 24px;
+
+}
+
+
+
+.pc-card a {
+
+    text-decoration: none;
+
+}
 
 
 
@@ -196,18 +243,15 @@ button:hover {
 
 
 
-
 input,
 textarea,
 select {
-
 
     width: 90%;
     padding: 12px;
     border-radius: 8px;
     border: none;
     margin-top: 5px;
-
 
 }
 
@@ -225,7 +269,6 @@ textarea {
 
 
 
-
 footer {
 
     text-align: center;
@@ -234,7 +277,6 @@ footer {
     margin-top: 50px;
 
 }
-
 
 
 
