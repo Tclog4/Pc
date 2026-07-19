@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Builder Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND Dashboard
+</div>
+
+<nav>
+
+<a href="index.html">Website</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>
+Builder Dashboard
+</h1>
+
+<p>
+Manage orders, builds and customer PCs.
+</p>
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2>
+Incoming Orders
+</h2>
+
+
+
+<div class="pc-card">
+
+
+<h3>
+Order #48291
+</h3>
+
+
+<p>
+Customer: Alex
+</p>
+
+
+<p>
+Build:
+🌑 Shadow Mk1
+</p>
+
+
+<p>
+Priority:
+High
+</p>
+
+
+<button onclick="startBuild()">
+Start Build
+</button>
+
+
+<h3 id="status">
+Waiting
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+Order #48292
+</h3>
+
+
+<p>
+Customer: Jamie
+</p>
+
+
+<p>
+Build:
+⚡ Nova Mk1
+</p>
+
+
+<p>
+Priority:
+Normal
+</p>
+
+
+<button>
+Select
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Build Progress
+</h2>
+
+
+
+<div class="pc-card">
+
+
+<p>
+Build ID:
+BUILD-48291
+</p>
+
+
+<select>
+
+<option>
+Parts Ordered
+</option>
+
+<option>
+Building
+</option>
+
+<option>
+Testing
+</option>
+
+<option>
+Ready For Delivery
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+function startBuild(){
+
+document.getElementById("status").innerHTML =
+"🟡 Building Started";
+
+
+}
+
+
+</script>
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
