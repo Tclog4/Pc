@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Find My PC</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="compare.html">Compare</a>
+<a href="finder.html">Find My PC</a>
+<a href="support.html">Support</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>Find Your Perfect PC</h1>
+
+<p>
+Answer a few questions and we will recommend the best build for you.
+</p>
+
+</section>
+
+
+
+
+<section>
+
+
+<h2>PC Finder</h2>
+
+
+<div class="pc-card">
+
+
+<label>
+What's your budget?
+</label>
+
+<br>
+
+<select id="budget">
+
+<option value="low">
+£500 - £800
+</option>
+
+<option value="medium">
+£800 - £1100
+</option>
+
+<option value="high">
+£1100+
+</option>
+
+</select>
+
+
+<br><br>
+
+
+<label>
+What do you mainly play?
+</label>
+
+<br>
+
+
+<select id="games">
+
+<option value="casual">
+Minecraft / Fortnite
+</option>
+
+<option value="gaming">
+War Thunder / Battlefield
+</option>
+
+<option value="heavy">
+AAA Games
+</option>
+
+</select>
+
+
+<br><br>
+
+
+
+<label>
+Resolution?
+</label>
+
+<br>
+
+
+<select id="resolution">
+
+<option value="1080">
+1080p
+</option>
+
+<option value="1440">
+1440p
+</option>
+
+
+</select>
+
+
+
+<br><br>
+
+
+<button onclick="findPC()">
+Find My PC
+</button>
+
+
+<h2 id="result"></h2>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+
+
+<script>
+
+function findPC(){
+
+let budget =
+document.getElementById("budget").value;
+
+
+let resolution =
+document.getElementById("resolution").value;
+
+
+let result =
+document.getElementById("result");
+
+
+
+if(budget == "low"){
+
+result.innerHTML =
+"🌑 Shadow is recommended - Best performance per £";
+
+}
+
+
+else if(budget == "medium"){
+
+result.innerHTML =
+"⚡ Nova is recommended - Best all-round gaming PC";
+
+}
+
+
+else{
+
+result.innerHTML =
+"🔥 Titan is recommended - Maximum performance";
+
+}
+
+
+}
+
+</script>
+
+
+</body>
+
+</html>
