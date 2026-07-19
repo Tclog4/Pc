@@ -25,6 +25,7 @@ PC BRAND Builder
 <nav>
 
 <a href="dashboard.html">Dashboard</a>
+<a href="index.html">Website</a>
 
 </nav>
 
@@ -33,17 +34,21 @@ PC BRAND Builder
 
 
 
+
 <section class="hero">
 
 <h1>
-Edit Build
+Build Editor
 </h1>
 
 <p>
-Update customer PC information.
+Manage customer PC information.
 </p>
 
 </section>
+
+
+
 
 
 
@@ -54,54 +59,42 @@ Update customer PC information.
 <div class="pc-card">
 
 
-<input id="buildID" placeholder="BUILD-48291">
+<h2>
+Build Information
+</h2>
+
+
+<label>
+Build ID
+</label>
+
+<br>
+
+<input value="BUILD-48291">
 
 
 <br><br>
 
 
-<input id="pcName" placeholder="PC Name">
+<label>
+Customer Name
+</label>
+
+<br>
+
+<input placeholder="Customer name">
 
 
 <br><br>
 
 
-<input id="status" placeholder="Status">
+<label>
+Customer Email
+</label>
 
+<br>
 
-<br><br>
-
-
-<input id="cpu" placeholder="CPU">
-
-
-<br><br>
-
-
-<input id="gpu" placeholder="GPU">
-
-
-<br><br>
-
-
-<input id="ram" placeholder="RAM">
-
-
-<br><br>
-
-
-<input id="storage" placeholder="Storage">
-
-
-<br><br>
-
-
-<button onclick="saveBuild()">
-Save Build
-</button>
-
-
-<h3 id="result"></h3>
+<input placeholder="Email">
 
 
 </div>
@@ -113,21 +106,234 @@ Save Build
 
 
 
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>
+PC Details
+</h2>
+
+
+<label>
+PC Model
+</label>
+
+<br>
+
+<input value="Shadow Mk1">
+
+
+<br><br>
+
+
+<label>
+CPU
+</label>
+
+<br>
+
+<input value="Ryzen 5 5600">
+
+
+<br><br>
+
+
+<label>
+GPU
+</label>
+
+<br>
+
+<input value="RTX 3060 Ti">
+
+
+<br><br>
+
+
+<label>
+RAM
+</label>
+
+<br>
+
+<input value="16GB DDR4">
+
+
+<br><br>
+
+
+<label>
+Storage
+</label>
+
+<br>
+
+<input value="1TB NVMe SSD">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>
+Build Status
+</h2>
+
+
+<select>
+
+<option>
+Parts Ordered
+</option>
+
+<option>
+Building
+</option>
+
+<option>
+Cable Management
+</option>
+
+<option>
+Testing
+</option>
+
+<option>
+Ready For Delivery
+</option>
+
+<option>
+Delivered
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>
+Testing Checklist
+</h2>
+
+
+<p>
+☑ CPU Stress Test
+</p>
+
+<p>
+☑ GPU Stress Test
+</p>
+
+<p>
+☐ Final Temperature Check
+</p>
+
+<p>
+☐ Packaging Check
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>
+Notes</h2>
+
+
+<textarea placeholder="Add build notes..."></textarea>
+
+
+<br>
+
+
+<button onclick="saveBuild()">
+Save Changes
+</button>
+
+
+<h3 id="saved"></h3>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
 <script>
 
 
 function saveBuild(){
 
 
-document.getElementById("result").innerHTML =
-
-"✅ Build saved successfully";
+document.getElementById("saved").innerHTML =
+"✅ Build Updated";
 
 
 }
 
 
 </script>
+
+
 
 
 
