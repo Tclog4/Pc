@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customise Your PC</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="compare.html">Compare</a>
+<a href="finder.html">Find My PC</a>
+<a href="support.html">Support</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+Customise Your PC
+</h1>
+
+<p>
+Choose upgrades and build the perfect gaming machine.
+</p>
+
+</section>
+
+
+
+
+<section>
+
+
+<h2>
+Choose Your Base PC
+</h2>
+
+
+<div class="pc-card">
+
+
+<select id="pc" onchange="updatePrice()">
+
+<option value="749">
+🌑 Shadow - £749
+</option>
+
+
+<option value="899">
+⚡ Nova - £899
+</option>
+
+
+<option value="1299">
+🔥 Titan - £1299
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2>
+Upgrades
+</h2>
+
+
+
+<div class="pc-card">
+
+
+<label>
+
+<input type="checkbox" value="40" onclick="updatePrice()">
+
+32GB RAM (+£40)
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input type="checkbox" value="60" onclick="updatePrice()">
+
+2TB SSD (+£60)
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input type="checkbox" value="25" onclick="updatePrice()">
+
+WiFi + Bluetooth (+£25)
+
+</label>
+
+
+<br><br>
+
+
+<label>
+
+<input type="checkbox" value="100" onclick="updatePrice()">
+
+Windows Installed (+£100)
+
+</label>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2>
+Your Build Total
+</h2>
+
+
+<div class="pc-card">
+
+
+<h3 id="price">
+£749
+</h3>
+
+
+<button>
+Continue
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+function updatePrice(){
+
+
+let base = Number(
+document.getElementById("pc").value
+);
+
+
+let upgrades =
+document.querySelectorAll(
+"input[type=checkbox]:checked"
+);
+
+
+let total = base;
+
+
+
+upgrades.forEach(function(item){
+
+total += Number(item.value);
+
+});
+
+
+document.getElementById("price").innerHTML =
+"£" + total;
+
+
+}
+
+
+</script>
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
