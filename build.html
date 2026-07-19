@@ -49,14 +49,15 @@ Track your computer from assembly to delivery.
 
 
 
+
 <section>
 
 
 <div class="pc-card">
 
 
-<h2>
-BUILD-48291
+<h2 id="buildNumber">
+Loading Build...
 </h2>
 
 
@@ -105,6 +106,10 @@ RAM: 16GB DDR4
 
 <p>
 Storage: 1TB NVMe SSD
+</p>
+
+<p>
+WiFi + Bluetooth: Included
 </p>
 
 
@@ -194,6 +199,65 @@ Testing Results
 
 
 </section>
+
+
+
+
+
+<section>
+
+
+<h2>
+Warranty Information
+</h2>
+
+
+<div class="pc-card">
+
+
+<p>
+Warranty:
+Active ✅
+</p>
+
+<p>
+Build ID linked to customer account
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+const params = new URLSearchParams(window.location.search);
+
+const buildID = params.get("id");
+
+
+if(buildID){
+
+document.getElementById("buildNumber").innerHTML =
+buildID;
+
+}
+
+else{
+
+document.getElementById("buildNumber").innerHTML =
+"BUILD-NOT-FOUND";
+
+}
+
+
+</script>
 
 
 
