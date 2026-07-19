@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Inventory Dashboard</title>
+<title>Inventory - PC BRAND</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,10 +22,32 @@
 PC BRAND Inventory
 </div>
 
+
 <nav>
 
-<a href="dashboard.html">Dashboard</a>
-<a href="index.html">Website</a>
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="inventory.html">
+Inventory
+</a>
+
+<a href="tradeins.html">
+Trade-Ins
+</a>
+
+<a href="build-editor.html">
+Build Editor
+</a>
+
+<a href="qr.html">
+QR System
+</a>
+
+<a href="index.html">
+Website
+</a>
 
 </nav>
 
@@ -34,100 +56,25 @@ PC BRAND Inventory
 
 
 
+
+
+
+
 <section class="hero">
 
+
 <h1>
-Parts Inventory
+Inventory Control
 </h1>
 
+
 <p>
-Track stock, costs and profit.
+Manage parts, stock and refurbished PCs.
 </p>
+
 
 </section>
 
-
-
-
-
-<section>
-
-
-<h2>
-Current Parts
-</h2>
-
-
-<div class="pc-card">
-
-
-<h3>Graphics Cards</h3>
-
-<p>
-RTX 3060 Ti
-</p>
-
-<p>
-Condition: Used - Tested ✅
-</p>
-
-<p>
-Cost: £202
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="pc-card">
-
-
-<h3>Processors</h3>
-
-<p>
-Ryzen 5 5600
-</p>
-
-<p>
-Condition: New
-</p>
-
-<p>
-Cost: £90
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="pc-card">
-
-
-<h3>Memory</h3>
-
-<p>
-16GB DDR4 RAM
-</p>
-
-<p>
-Condition: New
-</p>
-
-<p>
-Cost: £35
-</p>
-
-
-</div>
-
-
-</section>
 
 
 
@@ -139,41 +86,272 @@ Cost: £35
 
 
 <h2>
-Build Profit Calculator
+Stock Overview
 </h2>
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+<h3>
+🖥️ Graphics Cards
+</h3>
+
+<p>
+RTX 4060:
+4 Available
+</p>
+
+<p>
+RTX 4070:
+2 Available
+</p>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+⚙️ Processors
+</h3>
+
+<p>
+Intel CPUs:
+6 Available
+</p>
+
+<p>
+AMD CPUs:
+3 Available
+</p>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+💾 Storage
+</h3>
+
+<p>
+1TB SSD:
+2 Available
+</p>
+
+<p>
+2TB SSD:
+5 Available
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Parts Inventory
+</h2>
+
 
 
 <div class="pc-card">
 
 
-<p>
-Parts Cost:
-</p>
-
-
-<input id="cost" placeholder="Example: 500">
-
-
-<br><br>
+<h3>
+RTX 4060
+</h3>
 
 
 <p>
-Selling Price:
+Category:
+GPU
 </p>
 
 
-<input id="sale" placeholder="Example: 750">
+<p>
+Cost:
+£250
+</p>
 
 
-<br><br>
+<p>
+Stock:
+4
+</p>
 
 
-<button onclick="profit()">
-Calculate Profit
+<button>
+Edit
 </button>
 
 
-<h3 id="result"></h3>
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+32GB DDR5 RAM
+</h3>
+
+
+<p>
+Category:
+Memory
+</p>
+
+
+<p>
+Cost:
+£90
+</p>
+
+
+<p>
+Stock:
+8
+</p>
+
+
+<button>
+Edit
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Refurbished PCs
+</h2>
+
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+
+<div class="badge">
+Inspection
+</div>
+
+
+<h3>
+TRADE-1001
+</h3>
+
+
+<p>
+RTX 3060 Gaming PC
+</p>
+
+
+<p>
+Status:
+Testing
+</p>
+
+
+<p>
+Estimated resale:
+£650
+</p>
+
+
+<button>
+Manage
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="pc-card">
+
+
+<div class="badge">
+Ready
+</div>
+
+
+<h3>
+REFURB-1002
+</h3>
+
+
+<p>
+Gaming PC Upgrade Build
+</p>
+
+
+<p>
+Status:
+Ready For Sale
+</p>
+
+
+<p>
+Price:
+£599
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
 
 
 </div>
@@ -187,33 +365,91 @@ Calculate Profit
 
 
 
-<script>
+
+<section>
 
 
-function profit(){
+<h2>
+Inventory Actions
+</h2>
 
 
-let cost =
-Number(document.getElementById("cost").value);
+
+<div class="pc-container">
 
 
-let sale =
-Number(document.getElementById("sale").value);
+
+<div class="pc-card">
+
+<h3>
+➕ Add Part
+</h3>
+
+<p>
+Add new stock.
+</p>
 
 
-let profit =
-sale - cost;
+<button>
+Add
+</button>
+
+</div>
 
 
-document.getElementById("result").innerHTML =
-
-"Estimated Profit: £" + profit;
 
 
-}
+
+<div class="pc-card">
+
+<h3>
+♻️ Add Trade-In
+</h3>
+
+<p>
+Move accepted PCs into inventory.
+</p>
 
 
-</script>
+<a href="tradeins.html">
+
+<button>
+Review
+</button>
+
+</a>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+📊 Stock Report
+</h3>
+
+<p>
+View costs and profit.
+</p>
+
+
+<button>
+Open
+</button>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
 
 
 
