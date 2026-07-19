@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Your PC</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="customise.html">Customise</a>
+<a href="support.html">Support</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>
+Create Your Order
+</h1>
+
+<p>
+Your PC journey starts here.
+</p>
+
+</section>
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>Your Information</h2>
+
+
+<input id="name" placeholder="Your Name">
+
+
+<br><br>
+
+
+<input id="email" placeholder="Email">
+
+
+<br><br>
+
+
+<button onclick="createOrder()">
+Create Order
+</button>
+
+
+<h2 id="result"></h2>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+function createOrder(){
+
+
+let orderNumber =
+Math.floor(Math.random()*90000)+10000;
+
+
+let buildID =
+"BUILD-" + orderNumber;
+
+
+
+document.getElementById("result").innerHTML =
+
+"Order Created ✅<br><br>" +
+
+"Order Number: " + orderNumber +
+
+"<br>" +
+
+"Build ID: " + buildID +
+
+"<br><br>" +
+
+"Your QR tracking page will be available soon.";
+
+
+}
+
+
+</script>
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
