@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Build Tracking</title>
+<title>Your PC Build - PC BRAND</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,10 +22,16 @@
 PC BRAND
 </div>
 
+
 <nav>
 
-<a href="index.html">Home</a>
-<a href="support.html">Support</a>
+<a href="index.html">
+Website
+</a>
+
+<a href="support.html">
+Support
+</a>
 
 </nav>
 
@@ -34,17 +40,27 @@ PC BRAND
 
 
 
+
+
+
+
 <section class="hero">
 
+
 <h1>
-Your PC Build
+Your PC Journey
 </h1>
 
+
 <p>
-Track your computer from assembly to delivery.
+Track your custom PC from build to ownership.
 </p>
 
+
 </section>
+
+
+
 
 
 
@@ -56,60 +72,19 @@ Track your computer from assembly to delivery.
 <div class="pc-card">
 
 
-<h2 id="buildNumber">
-Loading Build...
-</h2>
-
-
-<h3>
-🌑 Shadow Mk1
-</h3>
-
-
-<p>
-Status:
-🟡 Final Testing
-</p>
-
-
+<div class="badge">
+BUILD-48291
 </div>
-
-
-</section>
-
-
-
-
-
-<section>
 
 
 <h2>
-Specifications
+🌑 Shadow Mk1
 </h2>
 
 
-<div class="pc-card">
-
-
 <p>
-CPU: Ryzen 5 5600
-</p>
-
-<p>
-GPU: RTX 3060 Ti
-</p>
-
-<p>
-RAM: 16GB DDR4
-</p>
-
-<p>
-Storage: 1TB NVMe SSD
-</p>
-
-<p>
-WiFi + Bluetooth: Included
+Built for:
+Alex
 </p>
 
 
@@ -117,6 +92,9 @@ WiFi + Bluetooth: Included
 
 
 </section>
+
+
+
 
 
 
@@ -134,27 +112,32 @@ Build Progress
 
 
 <p>
+✅ Order Confirmed
+</p>
+
+
+<p>
 ✅ Parts Collected
 </p>
 
-<p>
-✅ PC Assembled
-</p>
 
 <p>
-✅ Cable Management
+✅ Assembly Complete
 </p>
 
-<p>
-🟡 Stress Testing
-</p>
 
 <p>
-⬜ Packaging
+🟡 Performance Testing
 </p>
 
+
 <p>
-⬜ Delivered
+⚪ Packaging
+</p>
+
+
+<p>
+⚪ Delivered
 </p>
 
 
@@ -162,6 +145,92 @@ Build Progress
 
 
 </section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Your Hardware
+</h2>
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+<h3>
+CPU
+</h3>
+
+<p>
+Intel i5-13600KF
+</p>
+
+</div>
+
+
+
+
+<div class="pc-card">
+
+<h3>
+GPU
+</h3>
+
+<p>
+RTX 4060 Ti
+</p>
+
+</div>
+
+
+
+
+<div class="pc-card">
+
+<h3>
+Memory
+</h3>
+
+<p>
+32GB DDR5
+</p>
+
+</div>
+
+
+
+
+<div class="pc-card">
+
+<h3>
+Storage
+</h3>
+
+<p>
+1TB NVMe SSD
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 
@@ -175,30 +244,59 @@ Testing Results
 </h2>
 
 
+<div class="pc-container">
+
+
+
 <div class="pc-card">
 
+<h3>
+🌡️ Temperatures
+</h3>
 
 <p>
-✅ CPU Stress Test
+CPU:
+62°C
 </p>
 
 <p>
-✅ GPU Stress Test
+GPU:
+68°C
+</p>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+⚡ Performance
+</h3>
+
+<p>
+Stress Test:
+Passed ✅
 </p>
 
 <p>
-✅ Temperature Check
+Stability:
+Excellent ✅
 </p>
 
-<p>
-✅ Storage Health Check
-</p>
+</div>
+
 
 
 </div>
 
 
 </section>
+
+
+
 
 
 
@@ -208,7 +306,7 @@ Testing Results
 
 
 <h2>
-Warranty Information
+PC History
 </h2>
 
 
@@ -216,12 +314,20 @@ Warranty Information
 
 
 <p>
-Warranty:
-Active ✅
+📅 Built:
+July 2026
 </p>
 
+
 <p>
-Build ID linked to customer account
+🔧 Upgrades:
+None
+</p>
+
+
+<p>
+🛡️ Warranty:
+Active
 </p>
 
 
@@ -234,30 +340,41 @@ Build ID linked to customer account
 
 
 
-<script>
 
 
-const params = new URLSearchParams(window.location.search);
 
-const buildID = params.get("id");
-
-
-if(buildID){
-
-document.getElementById("buildNumber").innerHTML =
-buildID;
-
-}
-
-else{
-
-document.getElementById("buildNumber").innerHTML =
-"BUILD-NOT-FOUND";
-
-}
+<section>
 
 
-</script>
+<div class="pc-card">
+
+
+<h2>
+Need Help?
+</h2>
+
+
+<p>
+Contact PC BRAND support for repairs, upgrades or questions.
+</p>
+
+
+<a href="support.html">
+
+<button>
+Get Support
+</button>
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 
