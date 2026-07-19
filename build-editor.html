@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Build Editor</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND Builder
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>
+Edit Build
+</h1>
+
+<p>
+Update customer PC information.
+</p>
+
+</section>
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<input id="buildID" placeholder="BUILD-48291">
+
+
+<br><br>
+
+
+<input id="pcName" placeholder="PC Name">
+
+
+<br><br>
+
+
+<input id="status" placeholder="Status">
+
+
+<br><br>
+
+
+<input id="cpu" placeholder="CPU">
+
+
+<br><br>
+
+
+<input id="gpu" placeholder="GPU">
+
+
+<br><br>
+
+
+<input id="ram" placeholder="RAM">
+
+
+<br><br>
+
+
+<input id="storage" placeholder="Storage">
+
+
+<br><br>
+
+
+<button onclick="saveBuild()">
+Save Build
+</button>
+
+
+<h3 id="result"></h3>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+function saveBuild(){
+
+
+document.getElementById("result").innerHTML =
+
+"✅ Build saved successfully";
+
+
+}
+
+
+</script>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
