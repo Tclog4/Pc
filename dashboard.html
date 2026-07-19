@@ -25,6 +25,8 @@ PC BRAND Dashboard
 <nav>
 
 <a href="index.html">Website</a>
+<a href="inventory.html">Inventory</a>
+<a href="qr.html">QR System</a>
 
 </nav>
 
@@ -36,7 +38,7 @@ PC BRAND Dashboard
 <section class="hero">
 
 <h1>
-Builder Dashboard
+Builder Control Centre
 </h1>
 
 <p>
@@ -53,80 +55,52 @@ Manage orders, builds and customer PCs.
 
 
 <h2>
-Incoming Orders
+Overview
 </h2>
 
+
+<div class="pc-container">
 
 
 <div class="pc-card">
 
-
 <h3>
-Order #48291
+📦 Orders
 </h3>
 
-
 <p>
-Customer: Alex
+3 Active Orders
 </p>
-
-
-<p>
-Build:
-🌑 Shadow Mk1
-</p>
-
-
-<p>
-Priority:
-High
-</p>
-
-
-<button onclick="startBuild()">
-Start Build
-</button>
-
-
-<h3 id="status">
-Waiting
-</h3>
-
 
 </div>
 
 
 
+<div class="pc-card">
+
+<h3>
+🔧 Building
+</h3>
+
+<p>
+1 PC In Progress
+</p>
+
+</div>
+
 
 
 <div class="pc-card">
 
-
 <h3>
-Order #48292
+💷 Revenue
 </h3>
 
-
 <p>
-Customer: Jamie
+£2,847
 </p>
 
-
-<p>
-Build:
-⚡ Nova Mk1
-</p>
-
-
-<p>
-Priority:
-Normal
-</p>
-
-
-<button>
-Select
-</button>
+</div>
 
 
 </div>
@@ -144,7 +118,7 @@ Select
 
 
 <h2>
-Build Progress
+Build Queue
 </h2>
 
 
@@ -152,32 +126,238 @@ Build Progress
 <div class="pc-card">
 
 
+<h3>
+#BUILD-48291
+</h3>
+
+
 <p>
-Build ID:
-BUILD-48291
+Customer: Alex
 </p>
 
 
-<select>
-
-<option>
-Parts Ordered
-</option>
-
-<option>
-Building
-</option>
-
-<option>
-Testing
-</option>
-
-<option>
-Ready For Delivery
-</option>
+<p>
+PC:
+🌑 Shadow Mk1
+</p>
 
 
-</select>
+<p>
+Status:
+🟡 Stress Testing
+</p>
+
+
+<a href="build-editor.html">
+
+<button>
+Edit Build
+</button>
+
+</a>
+
+
+<a href="qr.html">
+
+<button>
+Generate QR
+</button>
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+#BUILD-48292
+</h3>
+
+
+<p>
+Customer: Jamie
+</p>
+
+
+<p>
+PC:
+⚡ Nova Mk1
+</p>
+
+
+<p>
+Status:
+🔵 Building
+</p>
+
+
+<a href="build-editor.html">
+
+<button>
+Edit Build
+</button>
+
+</a>
+
+
+<a href="qr.html">
+
+<button>
+Generate QR
+</button>
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+#BUILD-48293
+</h3>
+
+
+<p>
+Customer: Chris
+</p>
+
+
+<p>
+PC:
+🔥 Titan Mk1
+</p>
+
+
+<p>
+Status:
+🟢 Ready For Delivery
+</p>
+
+
+<a href="build-editor.html">
+
+<button>
+Edit Build
+</button>
+
+</a>
+
+
+<a href="qr.html">
+
+<button>
+Generate QR
+</button>
+
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Quick Actions
+</h2>
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+<h3>
+➕ New Build
+</h3>
+
+<p>
+Create a new customer build.
+</p>
+
+<button>
+Create
+</button>
+
+</div>
+
+
+
+
+<div class="pc-card">
+
+<h3>
+📦 Inventory
+</h3>
+
+<p>
+Check available parts.
+</p>
+
+
+<a href="inventory.html">
+
+<button>
+Open Inventory
+</button>
+
+</a>
+
+</div>
+
+
+
+
+<div class="pc-card">
+
+<h3>
+📱 QR System
+</h3>
+
+<p>
+Create customer tracking codes.
+</p>
+
+
+<a href="qr.html">
+
+<button>
+Open QR
+</button>
+
+</a>
+
+
+</div>
+
 
 
 </div>
@@ -190,21 +370,6 @@ Ready For Delivery
 
 
 
-<script>
-
-
-function startBuild(){
-
-document.getElementById("status").innerHTML =
-"🟡 Building Started";
-
-
-}
-
-
-</script>
-
-
 
 
 <footer>
@@ -214,6 +379,7 @@ document.getElementById("status").innerHTML =
 </p>
 
 </footer>
+
 
 
 </body>
