@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inventory Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND Inventory
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="index.html">Website</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>
+Parts Inventory
+</h1>
+
+<p>
+Track stock, costs and profit.
+</p>
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2>
+Current Parts
+</h2>
+
+
+<div class="pc-card">
+
+
+<h3>Graphics Cards</h3>
+
+<p>
+RTX 3060 Ti
+</p>
+
+<p>
+Condition: Used - Tested ✅
+</p>
+
+<p>
+Cost: £202
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>Processors</h3>
+
+<p>
+Ryzen 5 5600
+</p>
+
+<p>
+Condition: New
+</p>
+
+<p>
+Cost: £90
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>Memory</h3>
+
+<p>
+16GB DDR4 RAM
+</p>
+
+<p>
+Condition: New
+</p>
+
+<p>
+Cost: £35
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Build Profit Calculator
+</h2>
+
+
+<div class="pc-card">
+
+
+<p>
+Parts Cost:
+</p>
+
+
+<input id="cost" placeholder="Example: 500">
+
+
+<br><br>
+
+
+<p>
+Selling Price:
+</p>
+
+
+<input id="sale" placeholder="Example: 750">
+
+
+<br><br>
+
+
+<button onclick="profit()">
+Calculate Profit
+</button>
+
+
+<h3 id="result"></h3>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+function profit(){
+
+
+let cost =
+Number(document.getElementById("cost").value);
+
+
+let sale =
+Number(document.getElementById("sale").value);
+
+
+let profit =
+sale - cost;
+
+
+document.getElementById("result").innerHTML =
+
+"Estimated Profit: £" + profit;
+
+
+}
+
+
+</script>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
