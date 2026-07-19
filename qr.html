@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QR Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+PC BRAND QR System
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="index.html">Website</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>
+Build QR Generator
+</h1>
+
+<p>
+Create a QR code for customer PC tracking.
+</p>
+
+</section>
+
+
+
+
+<section>
+
+
+<div class="pc-card">
+
+
+<h2>
+Enter Build ID
+</h2>
+
+
+<input id="buildID" placeholder="Example: BUILD-48291">
+
+
+<br><br>
+
+
+<button onclick="generateQR()">
+Generate QR
+</button>
+
+
+<br><br>
+
+
+<img id="qr"
+width="200">
+
+
+<p id="link"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+function generateQR(){
+
+
+let id =
+document.getElementById("buildID").value;
+
+
+let url =
+"https://tclog4.github.io/Pc/build.html?id=" + id;
+
+
+
+document.getElementById("qr").src =
+
+"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
++ encodeURIComponent(url);
+
+
+
+document.getElementById("link").innerHTML =
+url;
+
+
+}
+
+
+</script>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 PC BRAND
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
