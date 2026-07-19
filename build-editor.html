@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Build Editor</title>
+<title>Build Editor - PC BRAND</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,10 +22,32 @@
 PC BRAND Builder
 </div>
 
+
 <nav>
 
-<a href="dashboard.html">Dashboard</a>
-<a href="index.html">Website</a>
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="inventory.html">
+Inventory
+</a>
+
+<a href="build-editor.html">
+Build Editor
+</a>
+
+<a href="tradeins.html">
+Trade-Ins
+</a>
+
+<a href="qr.html">
+QR System
+</a>
+
+<a href="index.html">
+Website
+</a>
 
 </nav>
 
@@ -35,17 +57,24 @@ PC BRAND Builder
 
 
 
+
+
+
 <section class="hero">
 
+
 <h1>
-Build Editor
+PC Build Editor
 </h1>
 
+
 <p>
-Manage customer PC information.
+Create, edit and prepare customer builds.
 </p>
 
+
 </section>
+
 
 
 
@@ -56,45 +85,51 @@ Manage customer PC information.
 <section>
 
 
-<div class="pc-card">
-
-
 <h2>
-Build Information
+Create Build
 </h2>
 
 
-<label>
-Build ID
-</label>
+<div class="pc-card">
 
-<br>
 
-<input value="BUILD-48291">
+<input placeholder="Build ID">
+
+<br><br>
+
+
+<input placeholder="Customer Name">
+
+<br><br>
+
+
+<select>
+
+<option>
+Select PC Model
+</option>
+
+<option>
+Shadow Mk1
+</option>
+
+<option>
+Nova Mk1
+</option>
+
+<option>
+Titan Mk1
+</option>
+
+</select>
 
 
 <br><br>
 
 
-<label>
-Customer Name
-</label>
-
-<br>
-
-<input placeholder="Customer name">
-
-
-<br><br>
-
-
-<label>
-Customer Email
-</label>
-
-<br>
-
-<input placeholder="Email">
+<button>
+Create Build
+</button>
 
 
 </div>
@@ -112,69 +147,148 @@ Customer Email
 <section>
 
 
-<div class="pc-card">
-
-
 <h2>
-PC Details
+Current Build
 </h2>
 
 
-<label>
-PC Model
-</label>
 
-<br>
-
-<input value="Shadow Mk1">
+<div class="pc-card">
 
 
-<br><br>
+<h3>
+#BUILD-48291
+</h3>
 
 
-<label>
+<p>
+Customer:
+Alex
+</p>
+
+
+<p>
+PC:
+🌑 Shadow Mk1
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Parts Selected
+</h2>
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+
+<h3>
 CPU
-</label>
-
-<br>
-
-<input value="Ryzen 5 5600">
+</h3>
 
 
-<br><br>
+<p>
+Intel i5-13600KF
+</p>
 
 
-<label>
+<button>
+Change
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
 GPU
-</label>
-
-<br>
-
-<input value="RTX 3060 Ti">
+</h3>
 
 
-<br><br>
+<p>
+RTX 4060 Ti
+</p>
 
 
-<label>
+<button>
+Change
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
 RAM
-</label>
-
-<br>
-
-<input value="16GB DDR4">
+</h3>
 
 
-<br><br>
+<p>
+32GB DDR5
+</p>
 
 
-<label>
+<button>
+Change
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
 Storage
-</label>
+</h3>
 
-<br>
 
-<input value="1TB NVMe SSD">
+<p>
+1TB NVMe SSD
+</p>
+
+
+<button>
+Change
+</button>
+
+
+</div>
+
 
 
 </div>
@@ -189,11 +303,7 @@ Storage
 
 
 
-
 <section>
-
-
-<div class="pc-card">
 
 
 <h2>
@@ -201,110 +311,40 @@ Build Status
 </h2>
 
 
-<select>
-
-<option>
-Parts Ordered
-</option>
-
-<option>
-Building
-</option>
-
-<option>
-Cable Management
-</option>
-
-<option>
-Testing
-</option>
-
-<option>
-Ready For Delivery
-</option>
-
-<option>
-Delivered
-</option>
-
-
-</select>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section>
-
-
 <div class="pc-card">
 
 
-<h2>
-Testing Checklist
-</h2>
-
-
 <p>
-☑ CPU Stress Test
-</p>
-
-<p>
-☑ GPU Stress Test
-</p>
-
-<p>
-☐ Final Temperature Check
-</p>
-
-<p>
-☐ Packaging Check
+⚪ Parts Ordered
 </p>
 
 
-</div>
+<p>
+🟡 Assembly
+</p>
 
 
-</section>
+<p>
+⚪ Testing
+</p>
 
 
+<p>
+⚪ Packaging
+</p>
 
 
-
-
-
-
-<section>
-
-
-<div class="pc-card">
-
-
-<h2>
-Notes</h2>
-
-
-<textarea placeholder="Add build notes..."></textarea>
+<p>
+⚪ Delivered
+</p>
 
 
 <br>
 
 
-<button onclick="saveBuild()">
-Save Changes
+<button>
+Update Status
 </button>
-
-
-<h3 id="saved"></h3>
 
 
 </div>
@@ -318,20 +358,98 @@ Save Changes
 
 
 
-<script>
+
+<section>
 
 
-function saveBuild(){
+<h2>
+Build Actions
+</h2>
 
 
-document.getElementById("saved").innerHTML =
-"✅ Build Updated";
+<div class="pc-container">
 
 
-}
+
+<div class="pc-card">
 
 
-</script>
+<h3>
+📱 QR Code
+</h3>
+
+
+<p>
+Create customer tracking QR.
+</p>
+
+
+<a href="qr.html">
+
+<button>
+Generate QR
+</button>
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+🧪 Testing
+</h3>
+
+
+<p>
+Record benchmark results.
+</p>
+
+
+<button>
+Add Results
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+
+<h3>
+📄 Build Report
+</h3>
+
+
+<p>
+Create customer report.
+</p>
+
+
+<button>
+Generate
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
 
 
 
