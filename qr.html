@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QR Generator</title>
+<title>QR System - PC BRAND</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -22,10 +22,32 @@
 PC BRAND QR System
 </div>
 
+
 <nav>
 
-<a href="dashboard.html">Dashboard</a>
-<a href="index.html">Website</a>
+<a href="dashboard.html">
+Dashboard
+</a>
+
+<a href="inventory.html">
+Inventory
+</a>
+
+<a href="build-editor.html">
+Build Editor
+</a>
+
+<a href="tradeins.html">
+Trade-Ins
+</a>
+
+<a href="qr.html">
+QR System
+</a>
+
+<a href="index.html">
+Website
+</a>
 
 </nav>
 
@@ -33,17 +55,29 @@ PC BRAND QR System
 
 
 
+
+
+
+
+
 <section class="hero">
 
+
 <h1>
-Build QR Generator
+PC Tracking QR System
 </h1>
 
+
 <p>
-Create a QR code for customer PC tracking.
+Create and manage customer build tracking codes.
 </p>
 
+
 </section>
+
+
+
+
 
 
 
@@ -51,33 +85,33 @@ Create a QR code for customer PC tracking.
 <section>
 
 
-<div class="pc-card">
-
-
 <h2>
-Enter Build ID
+Create QR Code
 </h2>
 
 
-<input id="buildID" placeholder="Example: BUILD-48291">
+<div class="pc-card">
+
+
+<input placeholder="Build ID">
+
+<br><br>
+
+
+<input placeholder="Customer Name">
+
+<br><br>
+
+
+<input placeholder="PC Model">
 
 
 <br><br>
 
 
-<button onclick="generateQR()">
+<button>
 Generate QR
 </button>
-
-
-<br><br>
-
-
-<img id="qr"
-width="200">
-
-
-<p id="link"></p>
 
 
 </div>
@@ -89,35 +123,262 @@ width="200">
 
 
 
-<script>
-
-function generateQR(){
-
-
-let id =
-document.getElementById("buildID").value;
-
-
-let url =
-"https://tclog4.github.io/Pc/build.html?id=" + id;
 
 
 
-document.getElementById("qr").src =
-
-"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" 
-+ encodeURIComponent(url);
+<section>
 
 
-
-document.getElementById("link").innerHTML =
-url;
-
-
-}
+<h2>
+Active QR Codes
+</h2>
 
 
-</script>
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+
+<div class="badge">
+Active
+</div>
+
+
+<h3>
+BUILD-48291
+</h3>
+
+
+<p>
+Customer:
+Alex
+</p>
+
+
+<p>
+PC:
+🌑 Shadow Mk1
+</p>
+
+
+<p>
+Status:
+🟡 Stress Testing
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="pc-card">
+
+
+<div class="badge">
+Active
+</div>
+
+
+<h3>
+BUILD-48292
+</h3>
+
+
+<p>
+Customer:
+Jamie
+</p>
+
+
+<p>
+PC:
+⚡ Nova Mk1
+</p>
+
+
+<p>
+Status:
+🔵 Building
+</p>
+
+
+<button>
+View
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Customer Tracking Page Preview
+</h2>
+
+
+
+<div class="pc-card">
+
+
+<h3>
+BUILD-48291
+</h3>
+
+
+<p>
+🌑 Shadow Mk1
+</p>
+
+
+<hr>
+
+
+<p>
+✅ Order Confirmed
+</p>
+
+
+<p>
+✅ Parts Collected
+</p>
+
+
+<p>
+🟡 Building
+</p>
+
+
+<p>
+⚪ Testing
+</p>
+
+
+<p>
+⚪ Delivered
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Build Information Stored
+</h2>
+
+
+<div class="pc-container">
+
+
+
+<div class="pc-card">
+
+<h3>
+Parts
+</h3>
+
+<p>
+CPU</p>
+
+<p>
+GPU</p>
+
+<p>
+RAM</p>
+
+<p>
+Storage</p>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+Testing
+</h3>
+
+<p>
+Temperatures</p>
+
+<p>
+Benchmarks</p>
+
+<p>
+Stability</p>
+
+</div>
+
+
+
+
+
+<div class="pc-card">
+
+<h3>
+History
+</h3>
+
+<p>
+Upgrades</p>
+
+<p>
+Repairs</p>
+
+<p>
+Ownership</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 
