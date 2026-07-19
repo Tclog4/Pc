@@ -1,0 +1,23 @@
+{
+  "BUILD-48291": {
+    "name": "Shadow Mk1",
+    "status": "Final Testing",
+    "cpu": "Ryzen 5 5600",
+    "gpu": "RTX 3060 Ti",
+    "ram": "16GB DDR4",
+    "storage": "1TB NVMe SSD",
+    "warranty": "Active"
+  },
+
+
+  "BUILD-48292": {
+    "name": "Nova Mk1",
+    "status": "Building",
+    "cpu": "Ryzen 5 7600",
+    "gpu": "RTX 4060 Ti",
+    "ram": "16GB DDR5",
+    "storage": "1TB NVMe SSD",
+    "warranty": "Active"
+  }
+
+}
