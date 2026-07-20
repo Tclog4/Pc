@@ -2204,6 +2204,57 @@ display:none;
 
 font-size:36px;
 
+}/* ===========================================
+   MOBILE HEADER FIX
+=========================================== */
+
+@media(max-width:900px){
+
+header{
+
+width:100%;
+
+padding:18px 20px;
+
+display:flex;
+
+flex-direction:column;
+
+overflow:hidden;
+
+}
+
+
+.logo{
+
+font-size:26px;
+
+text-align:center;
+
+}
+
+
+nav{
+
+width:100%;
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+}
+
+
+nav a{
+
+font-size:14px;
+
+padding:6px;
+
 }
 
 
