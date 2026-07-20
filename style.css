@@ -1,215 +1,1299 @@
-* {
-    box-sizing: border-box;
+/* ===========================================
+   PC BRAND • STEALTH THEME
+   PART 1 - FOUNDATION
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--bg:#0B0F14;
+--bg2:#111827;
+--card:#171E27;
+--card2:#1E2632;
+
+--border:#2B3645;
+
+--primary:#3B82F6;
+--primary2:#2563EB;
+
+--text:#FFFFFF;
+--text2:#A0AEC0;
+
+--success:#22C55E;
+--warning:#F59E0B;
+--danger:#EF4444;
+
+--radius:18px;
+
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:
+radial-gradient(circle at top,#182233 0%,#0B0F14 60%);
+
+color:var(--text);
+
+min-height:100vh;
+
+line-height:1.6;
+
+overflow-x:hidden;
+
 }
 
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0f;
-    color: white;
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#60A5FA;
+
 }
 
 
+/* Links */
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #111118;
+a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+a:hover{
+
+color:var(--primary);
+
 }
 
 
+/* Header */
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 8%;
+
+background:rgba(10,15,20,.75);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:900;
+
+letter-spacing:1px;
+
+color:white;
+
+}
+
+.logo span{
+
+color:var(--primary);
+
+}
+
+nav{
+
+display:flex;
+
+gap:28px;
+
+align-items:center;
+
+}
+
+nav a{
+
+font-weight:600;
+
+position:relative;
+
+padding:6px 0;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-4px;
+
+width:0;
+
+height:2px;
+
+background:var(--primary);
+
+transition:.35s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
 }
 
 
+/* Hero */
 
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.hero{
+
+padding:140px 8% 120px;
+
+text-align:center;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.hero h1{
+
+font-size:72px;
+
+font-weight:900;
+
+line-height:1.05;
+
+margin-bottom:20px;
+
+background:linear-gradient(
+90deg,
+white,
+#7FB4FF);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+color:var(--primary);
+
+margin-bottom:25px;
+
+font-weight:600;
+
+}
+
+.hero p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:19px;
+
+color:var(--text2);
+
+margin-bottom:45px;
+
 }
 
 
+/* Buttons */
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 8px;
+button{
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--primary2));
+
+color:white;
+
+border:none;
+
+padding:15px 34px;
+
+font-size:16px;
+
+font-weight:700;
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+0 12px 25px rgba(37,99,235,.25);
+
+margin:8px;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 18px 40px rgba(37,99,235,.45);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
 }
 
 
+/* Sections */
 
-nav a:hover {
-    background: #222230;
+section{
+
+padding:80px 8%;
+
+}
+
+section h2{
+
+font-size:42px;
+
+margin-bottom:35px;
+
+text-align:center;
+
+font-weight:800;
+
+}
+
+section p{
+
+color:var(--text2);
+
 }
 
 
+/* Grid */
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
+.pc-container{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
 }
 
 
+/* Cards */
 
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
+.pc-card{
+
+background:rgba(23,30,39,.92);
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+padding:35px;
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.pc-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.05),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+.pc-card:hover::before{
+
+left:100%;
+
+}
+
+.pc-card:hover{
+
+transform:
+
+translateY(-8px);
+
+border-color:var(--primary);
+
+box-shadow:
+
+0 25px 55px rgba(59,130,246,.18);
+
+}
+
+.pc-card h3{
+
+font-size:28px;
+
+margin-bottom:14px;
+
+}
+
+.pc-card p{
+
+margin-bottom:15px;
+
 }
 
 
+/* Price */
 
-.hero h2 {
-    color: #aaa;
+.price{
+
+font-size:42px;
+
+font-weight:900;
+
+margin:25px 0;
+
+color:white;
+
 }
 
 
+/* Performance */
 
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.5;
+.performance{
+
+display:inline-block;
+
+padding:8px 16px;
+
+background:rgba(59,130,246,.12);
+
+border-radius:100px;
+
+color:#8FC4FF;
+
+font-weight:700;
+
+margin-bottom:20px;
+
 }
 
 
+/* Badges */
 
-section {
-    padding: 50px 8%;
+.badge{
+
+display:inline-block;
+
+padding:8px 14px;
+
+border-radius:100px;
+
+font-size:13px;
+
+font-weight:700;
+
+background:linear-gradient(
+135deg,
+#2563EB,
+#60A5FA);
+
+margin-bottom:18px;
+
+box-shadow:
+
+0 8px 18px rgba(37,99,235,.25);
+
 }
+/* ===========================================
+   PC BRAND • STEALTH THEME
+   PART 2 - FORMS / TABLES / FOOTER / EFFECTS
+=========================================== */
 
 
-
-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-
-
-.pc-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-
-
-.pc-card {
-    background: #15151d;
-    padding: 25px;
-    border-radius: 15px;
-    max-width: 350px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid #252535;
-    transition: 0.3s;
-}
-
-
-
-.pc-card:hover {
-    transform: translateY(-8px);
-}
-
-
-
-.badge {
-    display: inline-block;
-    background: white;
-    color: black;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-
-.performance {
-    color: #aaa;
-    font-size: 14px;
-}
-
-
-
-.price {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 15px;
-}
-
-
-
-button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-
-
-button:hover {
-    opacity: 0.8;
-}
-
-
+/* Inputs */
 
 input,
-textarea,
-select {
+select,
+textarea{
 
-    width: 90%;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
+width:100%;
+
+padding:16px 18px;
+
+margin:10px 0;
+
+background:#121820;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+border-color:var(--primary);
+
+box-shadow:
+0 0 18px rgba(59,130,246,.35);
 
 }
 
 
+/* Tables */
 
-textarea {
-    height: 120px;
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:30px;
+
+background:var(--card);
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+th{
+
+background:#1E2632;
+
+padding:18px;
+
+text-align:left;
+
+}
+
+td{
+
+padding:18px;
+
+border-top:1px solid var(--border);
+
+}
+
+tr{
+
+transition:.3s;
+
+}
+
+tr:hover{
+
+background:rgba(59,130,246,.08);
+
 }
 
 
+/* Dashboard Cards */
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #111118;
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.stat-card{
+
+background:var(--card);
+
+border-radius:18px;
+
+padding:30px;
+
+border:1px solid var(--border);
+
+transition:.3s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--primary);
+
+}
+
+.stat-card h2{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+color:var(--text2);
+
 }
 
 
+/* Inventory Items */
 
-@media(max-width:700px){
+.inventory-item{
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px;
+
+margin-bottom:15px;
+
+background:var(--card);
+
+border-radius:16px;
+
+border:1px solid var(--border);
+
+transition:.3s;
+
+}
+
+.inventory-item:hover{
+
+border-color:var(--primary);
+
+}
 
 
-    nav {
-        justify-content: center;
-    }
+/* Status Colours */
+
+.success{
+
+color:var(--success);
+
+font-weight:700;
+
+}
+
+.warning{
+
+color:var(--warning);
+
+font-weight:700;
+
+}
+
+.danger{
+
+color:var(--danger);
+
+font-weight:700;
+
+}
 
 
-    .hero h1 {
-        font-size: 35px;
-    }
+/* Footer */
+
+footer{
+
+margin-top:80px;
+
+padding:40px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+background:#0A0F15;
+
+color:var(--text2);
+
+}
+
+
+/* Images */
+
+img{
+
+max-width:100%;
+
+border-radius:16px;
+
+display:block;
+
+}
+
+
+/* Floating Animation */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.float{
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+
+/* Fade In */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero,
+.pc-card,
+section{
+
+animation:fadeUp .8s ease;
+
+}
+
+
+/* Glow */
+
+.glow{
+
+box-shadow:
+
+0 0 25px rgba(59,130,246,.35);
+
+}
+
+
+/* Divider */
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.08);
+
+margin:50px 0;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+padding:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+padding:90px 25px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+section{
+
+padding:60px 25px;
+
+}
+
+section h2{
+
+font-size:34px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.pc-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================================
+   PC BRAND • STEALTH THEME
+   PART 3 - PREMIUM EFFECTS
+=========================================== */
+
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-50%;
+
+left:-50%;
+
+width:200%;
+
+height:200%;
+
+background:
+
+radial-gradient(circle,
+rgba(59,130,246,.08) 0%,
+transparent 60%);
+
+animation:rotateBackground 60s linear infinite;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+@keyframes rotateBackground{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+/* Floating Blue Glow */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:15%;
+
+right:10%;
+
+width:500px;
+
+height:500px;
+
+background:
+
+radial-gradient(circle,
+rgba(59,130,246,.12),
+transparent 70%);
+
+filter:blur(90px);
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+/* Hero Glow */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-180px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:700px;
+
+height:700px;
+
+background:
+
+radial-gradient(circle,
+rgba(59,130,246,.12),
+transparent 70%);
+
+filter:blur(90px);
+
+z-index:-1;
+
+}
+
+
+/* Card Shine */
+
+.pc-card{
+
+isolation:isolate;
+
+}
+
+.pc-card::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+135deg,
+
+rgba(255,255,255,.03),
+
+transparent,
+
+rgba(255,255,255,.02)
+
+);
+
+pointer-events:none;
+
+}
+
+
+/* Better Hover */
+
+.pc-card:hover{
+
+transform:
+
+translateY(-10px)
+scale(1.02);
+
+}
+
+
+/* Better Price */
+
+.price{
+
+letter-spacing:-1px;
+
+text-shadow:
+
+0 0 18px rgba(59,130,246,.25);
+
+}
+
+
+/* Better Badge */
+
+.badge{
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+
+
+/* Buttons */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+button::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.25),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+button:hover::before{
+
+left:120%;
+
+}
+
+
+/* Logo */
+
+.logo{
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.logo:hover{
+
+color:var(--primary);
+
+text-shadow:
+
+0 0 20px rgba(59,130,246,.45);
+
+}
+
+
+/* Navigation */
+
+nav a{
+
+transition:.25s;
+
+}
+
+nav a:hover{
+
+transform:translateY(-2px);
+
+}
+
+
+/* Card Images */
+
+.pc-card img{
+
+transition:.4s;
+
+}
+
+.pc-card:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/* Hero Buttons */
+
+.hero button{
+
+min-width:190px;
+
+}
+
+
+/* Sections */
+
+section{
+
+position:relative;
+
+}
+
+section::after{
+
+content:"";
+
+display:block;
+
+width:80px;
+
+height:4px;
+
+margin:40px auto 0;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--primary),
+
+transparent
+
+);
+
+opacity:.35;
+
+}
+
+
+/* Better Shadows */
+
+.pc-card{
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.pc-card:hover{
+
+box-shadow:
+
+0 35px 70px rgba(0,0,0,.45),
+
+0 0 35px rgba(59,130,246,.18);
+
+}
+
+
+/* Selection */
+
+::selection{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+
+/* Nice Focus */
+
+button:focus,
+input:focus,
+select:focus{
+
+outline:none;
+
+}
+
+
+/* Scroll Reveal */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
 
 }
