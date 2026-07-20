@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Builder Dashboard</title>
+<title>PC BRAND Dashboard</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,33 +19,8 @@
 <header>
 
 <div class="logo">
-PC BRAND Dashboard
+PC <span>BRAND</span> Dashboard
 </div>
-
-
-<nav>
-
-<a href="index.html">
-Website
-</a>
-
-<a href="inventory.html">
-Inventory
-</a>
-
-<a href="tradeins.html">
-Trade-Ins
-</a>
-
-<a href="build-editor.html">
-Build Editor
-</a>
-
-<a href="qr.html">
-QR System
-</a>
-
-</nav>
 
 </header>
 
@@ -53,17 +28,101 @@ QR System
 
 
 
+<div class="dashboard-layout">
 
 
-<section class="hero">
+
+<aside class="dashboard-sidebar">
+
+
+<h2>
+PC BRAND
+</h2>
+
+
+<a href="#">
+📊 Overview
+</a>
+
+
+<a href="#">
+🌐 Website Manager
+</a>
+
+
+<a href="#">
+📦 Inventory
+</a>
+
+
+<a href="#">
+🛠 Builder Control
+</a>
+
+
+<a href="#">
+🖥 Orders
+</a>
+
+
+<a href="#">
+🔧 Build Manager
+</a>
+
+
+<a href="#">
+♻ Trade Ins
+</a>
+
+
+<a href="#">
+💷 Finance
+</a>
+
+
+<a href="#">
+📈 Analytics
+</a>
+
+
+<a href="#">
+👥 Customers
+</a>
+
+
+<a href="#">
+🎫 Support
+</a>
+
+
+<a href="#">
+⚙ Settings
+</a>
+
+
+</aside>
+
+
+
+
+
+
+<main class="dashboard-main">
+
+
+
+<section class="dashboard-title">
+
 
 <h1>
-Builder Control Centre
+Command Centre
 </h1>
 
+
 <p>
-Manage orders, builds, inventory and trade-ins.
+Manage PC BRAND from one place.
 </p>
+
 
 </section>
 
@@ -73,25 +132,22 @@ Manage orders, builds, inventory and trade-ins.
 
 
 
-<section>
-
-<h2>
-Overview
-</h2>
-
-
-<div class="pc-container">
+<section class="dashboard-grid">
 
 
 
-<div class="pc-card">
+<div class="dashboard-box">
 
 <h3>
 📦 Orders
 </h3>
 
+<strong>
+0
+</strong>
+
 <p>
-3 Active Orders
+No orders yet
 </p>
 
 </div>
@@ -99,51 +155,63 @@ Overview
 
 
 
-<div class="pc-card">
 
-<h3>
-🔧 Building
-</h3>
-
-<p>
-1 PC In Progress
-</p>
-
-</div>
-
-
-
-
-<div class="pc-card">
-
-<h3>
-♻️ Trade-Ins
-</h3>
-
-<p>
-5 Waiting Review
-</p>
-
-</div>
-
-
-
-
-<div class="pc-card">
+<div class="dashboard-box">
 
 <h3>
 💷 Revenue
 </h3>
 
+<strong>
+£0
+</strong>
+
 <p>
-£2,847
+Waiting for sales
 </p>
 
 </div>
 
 
 
+
+
+<div class="dashboard-box">
+
+<h3>
+🖥 Builds
+</h3>
+
+<strong>
+0
+</strong>
+
+<p>
+No active builds
+</p>
+
 </div>
+
+
+
+
+
+<div class="dashboard-box">
+
+<h3>
+⚠ Stock Alerts
+</h3>
+
+<strong>
+0
+</strong>
+
+<p>
+Everything OK
+</p>
+
+</div>
+
 
 </section>
 
@@ -154,62 +222,52 @@ Overview
 
 
 
-<section>
+
+<section class="dashboard-panel">
 
 
 <h2>
-Build Queue
+Website Manager
 </h2>
 
 
-
-<div class="pc-container">
-
-
-
-<div class="pc-card">
-
-<h3>
-#BUILD-48291
-</h3>
-
-
 <p>
-Customer: Alex
+Control homepage content, featured PCs, banners and promotions.
 </p>
 
-
-<p>
-PC:
-🌑 Shadow Mk1
-</p>
-
-
-<p>
-Status:
-🟡 Stress Testing
-</p>
-
-
-<a href="build-editor.html">
 
 <button>
-Edit Build
+Open Manager
 </button>
 
-</a>
+
+</section>
 
 
-<a href="qr.html">
+
+
+
+
+
+<section class="dashboard-panel">
+
+
+<h2>
+Inventory Manager
+</h2>
+
+
+<p>
+Add GPUs, CPUs, RAM, storage and other components.
+</p>
+
 
 <button>
-Generate QR
+Manage Parts
 </button>
 
-</a>
 
-
-</div>
+</section>
 
 
 
@@ -217,103 +275,22 @@ Generate QR
 
 
 
-<div class="pc-card">
-
-<h3>
-#BUILD-48292
-</h3>
+<section class="dashboard-panel">
 
 
-<p>
-Customer: Jamie
-</p>
+<h2>
+Custom Builder Control
+</h2>
 
 
 <p>
-PC:
-⚡ Nova Mk1
+Choose which parts customers can select.
 </p>
 
-
-<p>
-Status:
-🔵 Building
-</p>
-
-
-<a href="build-editor.html">
 
 <button>
-Edit Build
+Edit Builder
 </button>
-
-</a>
-
-
-<a href="qr.html">
-
-<button>
-Generate QR
-</button>
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="pc-card">
-
-<h3>
-#BUILD-48293
-</h3>
-
-
-<p>
-Customer: Chris
-</p>
-
-
-<p>
-PC:
-🔥 Titan Mk1
-</p>
-
-
-<p>
-Status:
-🟢 Ready For Delivery
-</p>
-
-
-<a href="build-editor.html">
-
-<button>
-Edit Build
-</button>
-
-</a>
-
-
-<a href="qr.html">
-
-<button>
-Generate QR
-</button>
-
-</a>
-
-
-</div>
-
-
-
-</div>
 
 
 </section>
@@ -325,7 +302,7 @@ Generate QR
 
 
 
-<section>
+<section class="dashboard-panel">
 
 
 <h2>
@@ -333,35 +310,14 @@ Trade-In Centre
 </h2>
 
 
-<div class="pc-card">
-
-
-<h3>
-♻️ New Trade Requests
-</h3>
-
-
 <p>
-Trade #1001 - RTX 3060 PC
+Review customer PCs and create store credit offers.
 </p>
 
-
-<p>
-Estimated Value:
-£450
-</p>
-
-
-<a href="tradeins.html">
 
 <button>
-Review Trade-Ins
+Open Trade Ins
 </button>
-
-</a>
-
-
-</div>
 
 
 </section>
@@ -373,114 +329,17 @@ Review Trade-Ins
 
 
 
-<section>
+<section class="dashboard-panel">
 
 
 <h2>
-Quick Actions
+Recent Activity
 </h2>
 
 
-<div class="pc-container">
+<div class="empty-box">
 
-
-
-<div class="pc-card">
-
-<h3>
-➕ New Build
-</h3>
-
-<p>
-Create a customer PC build.
-</p>
-
-
-<button>
-Create
-</button>
-
-</div>
-
-
-
-
-
-<div class="pc-card">
-
-<h3>
-📦 Inventory
-</h3>
-
-<p>
-Manage parts and stock levels.
-</p>
-
-
-<a href="inventory.html">
-
-<button>
-Open Inventory
-</button>
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-<div class="pc-card">
-
-<h3>
-📱 QR System
-</h3>
-
-<p>
-Create customer tracking codes.
-</p>
-
-
-<a href="qr.html">
-
-<button>
-Open QR
-</button>
-
-</a>
-
-
-</div>
-
-
-
-
-<div class="pc-card">
-
-<h3>
-♻️ Trade-Ins
-</h3>
-
-<p>
-Review customer PCs.
-</p>
-
-
-<a href="tradeins.html">
-
-<button>
-Open Trade-Ins
-</button>
-
-</a>
-
-
-</div>
-
-
+No activity yet.
 
 </div>
 
@@ -493,38 +352,10 @@ Open Trade-Ins
 
 
 
-
-<section>
-
-
-<h2>
-System Alerts
-</h2>
-
-
-<div class="pc-card">
-
-
-<p>
-🟡 Low stock: 1TB SSD
-</p>
-
-
-<p>
-🟡 Trade-In waiting inspection
-</p>
-
-
-<p>
-🟢 All builds passing tests
-</p>
+</main>
 
 
 </div>
-
-
-</section>
-
 
 
 
@@ -534,11 +365,10 @@ System Alerts
 
 <footer>
 
-<p>
 © 2026 PC BRAND
-</p>
 
 </footer>
+
 
 
 </body>
